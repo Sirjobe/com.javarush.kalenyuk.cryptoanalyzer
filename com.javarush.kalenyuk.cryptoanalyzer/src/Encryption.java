@@ -53,7 +53,7 @@ public class Encryption {
                         int count = ALPHABET.length - (key % ALPHABET.length);
                         if (chars[i] == ALPHABET[j]||chars[i]==Character.toUpperCase(ALPHABET[j])){
                             if (Character.isUpperCase(chars[i])){
-                                chars[i] = ALPHABET[(j + count) % ALPHABET.length];
+                                chars[i] = Character.toUpperCase(ALPHABET[(j + count) % ALPHABET.length]);
                             }else {
                                 chars[i] = ALPHABET[(j + count) % ALPHABET.length];
                             }
@@ -71,4 +71,6 @@ public class Encryption {
             }
         return stringBuilder.toString();
     }
+
+
 }

@@ -1,6 +1,7 @@
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Scanner;
 
@@ -41,5 +42,6 @@ public class FileManager {
         BufferedWriter bufOutput = new BufferedWriter(new FileWriter(createFile));// создаем буфер
         bufOutput.write(content); // запись строк в файл
         bufOutput.close();// закрытие файла
+
     }
 }
