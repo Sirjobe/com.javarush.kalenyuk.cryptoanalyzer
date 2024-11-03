@@ -15,6 +15,5 @@ public class Application {
             case 2 -> fileManager.fileOutput(encryption.decoder(fileManager.fileInput()));
         }
         System.out.println("Благодарим за использование нашей программы, ваше требование выполнено");
-//         fileManager.fileOutput(fileManager.fileInput());
     }
 }
