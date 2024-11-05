@@ -1,7 +1,6 @@
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -14,7 +13,6 @@ public class BruteForce {
     public void bruteForce () throws IOException {
         FileManager fileManager = new FileManager();
         String content = fileManager.fileInput();
-        Scanner console = new Scanner(System.in);
         boolean lie = false;
         StringBuilder stringBuilder = new StringBuilder();
         String nameFile;
@@ -44,7 +42,7 @@ public class BruteForce {
         }
 
     }
-    public void fileOutput ( String nameFile, String content) throws IOException, FileAlreadyExistsException {
+    public void fileOutput ( String nameFile, String content) throws IOException {
         Scanner input = new Scanner(System.in);
         String createFile;
         System.out.println("Введите путь к папке для сохранения файла");
