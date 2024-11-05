@@ -50,12 +50,12 @@ public class Encryption {
                 char[] chars = symbol.toCharArray();
                 for (int i = 0; i < chars.length; i++) {
                     for (int j = 0; j < ALPHABET.length; j++) {
-                        int count = ALPHABET.length - (key % ALPHABET.length);
+                        int count = (j-key+ALPHABET.length)%ALPHABET.length;
                         if (chars[i] == ALPHABET[j]||chars[i]==Character.toUpperCase(ALPHABET[j])){
                             if (Character.isUpperCase(chars[i])){
-                                chars[i] = Character.toUpperCase(ALPHABET[(j + count) % ALPHABET.length]);
+                                chars[i] = Character.toUpperCase(ALPHABET[count]);
                             }else {
-                                chars[i] = ALPHABET[(j + count) % ALPHABET.length];
+                                chars[i] = ALPHABET[count];
                             }
                             stringBuilder.append(chars[i]);
                             break;

@@ -45,7 +45,14 @@ public class BruteForce {
 
     }
     public void fileOutput ( String nameFile, String content) throws IOException, FileAlreadyExistsException {
-        String createFile = "C:\\Users\\user\\IdeaProjects\\com.javarush.kalenyuk.cryptoanalyzer\\src\\";
+        Scanner input = new Scanner(System.in);
+        String createFile;
+        System.out.println("Введите путь к папке для сохранения файла");
+        while (true){
+        createFile = input.nextLine();
+        if (Files.isDirectory(Path.of(createFile))){
+            break;
+        }else System.out.println("Неверно введен путь к папке");}
             Path file = Paths.get(createFile);
             Path name = file.resolve(nameFile);
         if(!Files.exists(name)){
