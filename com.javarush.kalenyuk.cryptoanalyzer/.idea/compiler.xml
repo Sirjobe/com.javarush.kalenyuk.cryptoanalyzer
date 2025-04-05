@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="demoFX" />
+        <module name="demoFX (1)" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="CryptoAnalyzer" target="22" />
+      <module name="CryptoAnalyzer.main" target="22" />
+      <module name="CryptoAnalyzer.test" target="22" />
+      <module name="demofx.main" target="22" />
+      <module name="demofx.test" target="22" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
